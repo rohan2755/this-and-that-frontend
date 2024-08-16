@@ -5,6 +5,8 @@ import SignUp from '../pages/SignUp';
 import AllEvents from '../pages/AllEvents';
 import Result from '../pages/Result';
 import Answer from '../pages/Answer';
+import Form from '../pages/Form';
+
 // import Cricket from '../pages/Cricket';
 // import Login from '../pages/Login';
 // import Olympics from '../pages/Olympics';
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
                 path : "answer",
                 element : <Answer/>,
 
+            },
+            {
+                path: "form",
+                element : <Form/>
             }
             // {
             //     path : "events/all-events",

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SummaryApi from '../common';
 
 const ShowCard = ({ d, index }) => {
-  console.log(d)
+  console.log("ddddddddddddddddddddddd",d)
   const [selectedAnswers, setSelectedAnswers] = useState(Array(10).fill(null));
 
   const handleSubmit = async (ANS) => {
@@ -34,11 +34,11 @@ const ShowCard = ({ d, index }) => {
         {d.question}
       </div>
       <div className="flex space-x-2 m-2">
-        <button onClick={() => handleSubmit("Yes")} className={`bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-800 transition duration-200 ${selectedAnswers[index] === 'Yes' ? 'bg-green-500 text-white' : 'bg-gray-300 text-black'}`}>
-          Yes
+        <button onClick={() => handleSubmit(`${d.options[0]}`)} className={`bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-800 transition duration-200 ${selectedAnswers[index] === `${d.options[0]}` ? 'bg-green-500 text-white' : 'bg-gray-300 text-black'}`}>
+          {d.options[0]}
         </button>
-        <button onClick={() => handleSubmit("No")} className={`bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-800 transition duration-200 ${selectedAnswers[index] === 'No' ? 'bg-green-500 text-white' : 'bg-gray-300 text-black'}`}>
-          No
+        <button onClick={() => handleSubmit(`${d.options[1]}`)} className={`bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-800 transition duration-200 ${selectedAnswers[index] === `${d.options[1]}` ? 'bg-green-500 text-white' : 'bg-gray-300 text-black'}`}>
+          {d.options[1]}
         </button>
       </div>
     </div>

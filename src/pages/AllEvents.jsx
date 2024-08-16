@@ -237,6 +237,7 @@ const AllEvents = () => {
   const [ans , setAns] = useState("")
   const [leaderBoard, setLeaderBoard] = useState([]);
 
+  let Sol = ""
   const navigate = useNavigate();
 
 
@@ -442,16 +443,16 @@ const AllEvents = () => {
         {/* Buttons */}
         <div className="flex justify-around mt-4">
           <button
-            onClick={() => handleNextQuestion("Yes")}
+            onClick={() => handleNextQuestion(`${data[index].options[0]}`)}
             className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105"
           >
-            Yes
+            {data[index].options[0]}
           </button>
           <button
-            onClick={() => handleNextQuestion("No")}
+            onClick={() => handleNextQuestion(`${data[index].options[1]}`)}
             className="bg-red-400 hover:bg-red-500 text-white font-semibold py-2 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105"
           >
-            No
+            {data[index].options[1]}
           </button>
         </div>
       </div>
