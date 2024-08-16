@@ -1,4 +1,4 @@
-const backendDomin = "http://localhost:8000"
+const backendDomin = "https://this-and-that-backend.onrender.com"
 const SummaryApi = {
     signUp : {
         url : `${backendDomin}/api/signup`,
